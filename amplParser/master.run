@@ -1,0 +1,59 @@
+print '---Start Report---';
+
+print '---Start Solve---';
+#solve;
+print '---End Solve---';
+
+print '---Start Variables---';
+print 'name[index]|value';
+for {i in 1.._nvars}
+    print _varname[i] & '|' & _var[i];
+print '---End Variables---';
+
+print '---Start Objectives---';
+print 'name|value';
+for {i in 1.._nobjs}
+    print _objname[i] & '|' & _obj[i];
+print '---End Objectives---';
+
+print '---Start amplTimes---';
+print 'name|value|description';
+print 'elapsed|' & _ampl_elapsed_time & '|elapsed seconds since the start of the AMPL process';
+print 'system|' & _ampl_system_time & '|system CPU seconds used by the AMPL process itself';
+print 'user|' & _ampl_user_time & '|user CPU seconds used by the AMPL process itself';
+print 'total|' & _ampl_time & '|_ ampl _ system _ time + _ ampl _ user _ time';
+print '---End amplTimes---';
+
+print '---Start shellTimes---';
+print 'name|value|description';
+print 'elapsed|' & _shell_elapsed_time & '|elapsed seconds for most recent shell command';
+print 'system|' & _shell_system_time & '|system CPU seconds used by most recent shell command';
+print 'user|' & _shell_user_time & '|user CPU seconds used by most recent shell command';
+print 'total|' & _shell_time  & '|_ shell _ system _ time + _ shell _ user _ time';
+print '---End shellTimes---';
+
+print '---Start solveTimes---';
+print 'name|value|description';
+print 'elapsed|' & _solve_elapsed_time & '|elapsed seconds for most recent solve command';
+print 'system|' & _solve_system_time & '|system CPU seconds used by most recent solve command';
+print 'user|' & _solve_user_time & '|user CPU seconds used by most recent solve command';
+print 'total|' & _solve_time & '|_ solve _ system _ time + _ solve _ user _ time';
+print '---End solveTimes---';
+
+print '---Start totalShellTimes---';
+print 'name|value|description';
+print 'elapsed|' & _total_shell_elapsed_time & '|elapsed seconds used by all shell commands';
+print 'system|' & _total_shell_system_time & '|system CPU seconds used by all shell commands';
+print 'user|' & _total_shell_user_time & '|user CPU seconds used by all shell commands';
+print 'total|' & _total_shell_time & '|_ total _ shell _ system _ time + _ total _ shell _ user _ time';
+print '---End totalShellTimes---';
+
+print '---Start totalSolveTimes---';
+print 'name|value|description';
+print 'elapsed|' & _total_solve_elapsed_time & '|elapsed seconds used by all solve commands';
+print 'system|' & _total_solve_system_time & '|system CPU seconds used by all solve commands';
+print 'user|' & _total_solve_user_time & '|user CPU seconds used by all solve commands';
+print 'total|' & _total_solve_time & '|';
+print '---End totalSolveTimes---';
+
+print '---End Report---';
